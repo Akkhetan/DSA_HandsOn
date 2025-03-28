@@ -110,6 +110,9 @@ public class Deque<Item> implements Iterable<Item> {
             current = current.next;
             return item;
         }
+        public void remove(){
+            throw new UnsupportedOperationException();
+        }
     }
 
     // unit testing (required)
@@ -135,7 +138,8 @@ public class Deque<Item> implements Iterable<Item> {
         System.out.println("Is Deque empty? " + deque.isEmpty() );
        // deque.addFirst(null);
        // deque.addLast(null);
-        iterator.next();
+       // iterator.next();
+        iterator.remove();
 
 
     }
