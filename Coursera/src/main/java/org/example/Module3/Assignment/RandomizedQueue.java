@@ -7,7 +7,7 @@ import java.util.Random;
 public class RandomizedQueue<Item> implements Iterable<Item> {
     Node head ;
     Node tail;
-    int size;
+    private int size;
     private final Random random;
 
     private class Node{
@@ -129,7 +129,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         Node current = head;
         int i = 0;
         while(current != null){
-            objects[i++] = current;
+            objects[i++] = current.item;
             current = current.next;
         }
         shuffleArray(objects);
@@ -155,18 +155,20 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         rq.enqueue(40);
         rq.enqueue(50);
 
+        System.out.println("rq.sample() : " + rq.sample());
         System.out.println("Random Dequeue: " + rq.dequeue());
         System.out.println("Random Dequeue: " + rq.dequeue());
+        System.out.println("Random Dequeue size : " + rq.size());
+
 
         System.out.println("Remaining Items (Random Order):");
-        /*for (int item : rq) {
+        for (int item : rq) {
             System.out.println(item);
-        }*/
+        }
 
         Iterator<Integer> iterator = rq.iterator();
-        while(iterator.hasNext()){
-            System.out.println("contents in deque : "+ iterator.next());
-        }
+        //iterator.remove();
+
     }
 
 }
