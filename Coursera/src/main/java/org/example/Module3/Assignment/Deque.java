@@ -4,11 +4,11 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
-    Node first = null;
-    Node last = null;
-    int size = 0;
+    private Node first = null;
+    private Node last = null;
+    private int size = 0;
 
-    class Node{
+    private class Node{
         Item item;
         Node next;
     }
@@ -93,7 +93,7 @@ public class Deque<Item> implements Iterable<Item> {
         return new ListIterator();
     }
 
-    class ListIterator implements Iterator<Item>{
+    private class ListIterator implements Iterator<Item>{
 
         private Node current = first;
 

@@ -5,8 +5,8 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
-    Node head ;
-    Node tail;
+    private Node head ;
+    private Node tail;
     private int size;
     private final Random random;
 
