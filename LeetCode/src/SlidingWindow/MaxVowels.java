@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.*;
 
-public class Solution {
+public class MaxVowels {
 
     public static void main(String[] args) {
         String s = "leetcode";
